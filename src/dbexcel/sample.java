@@ -30,7 +30,7 @@ public class sample {
 	}
 
 	
-	public static void ReadExcel(String spath)
+	public static void ReadExcel(String fpath)
 	{
 		try
 		{
@@ -59,7 +59,7 @@ public class sample {
 		}
 		
 		}
-	private static void write2Excel() 
+	private static void write2Excel(Font headerFot) 
 	{
 		String[] colums={"SNO","NAME","SALARY","MOBILE"};
 		try
@@ -67,7 +67,7 @@ public class sample {
 			ResultSet rs=DBOperations.GetData();
 			Workbook workbook=new XSSFWorkbook();
 			CreationHelper createHelper=workbook.getCreationHelper();
-			Sheet sheet= workbook.createsheet("Empolyee");
+			Sheet sheet= workbook.createSheet("Empolyee");
 			
 			//create a Font for stylig header cells
 			Font headerFont=workbook.createFont();

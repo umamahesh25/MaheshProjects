@@ -22,6 +22,7 @@ public class DBOperations
 				pst.setString(2, Name);
 				pst.setString(3, salary);
 				pst.setString(4, Mobile);
+				pst.setString(5, mahesh);
 				int l=pst.executeUpdate();
 				if(l>0)
 				{
